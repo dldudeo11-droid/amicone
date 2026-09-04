@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amicone.co.kr/sitemap.xml
