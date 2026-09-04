@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>섭외 문의 · Booking | AMICONE 아미코네</title>
+<meta name="description" content="아미코네 섭외 문의 — 기획공연·기업/기관 행사·축하 연주·페스티벌 초청. 010-6417-9634 · amicone5@naver.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="섭외 문의 · Booking | AMICONE">
+<meta property="og:description" content="기획공연·기업/기관 행사·축하 연주·페스티벌 초청 문의.">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="assets/logo_dark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav id="nav" class="static-solid">
+  <div class="wrap">
+    <a href="./" class="logo"><img src="assets/logo.png" alt="AMICONE Opera Singers"></a>
+    <div class="nav-right">
+      <ul id="navlinks">
+        <li><a href="./" data-i18n="n1">소개</a></li>
+        <li><a href="history.html" data-i18n="n2">연혁</a></li>
+        <li><a href="sketches.html" data-i18n="n3">연주 스케치</a></li>
+        <li><a href="members.html" data-i18n="n4">단원</a></li>
+        <li><a href="contact.html" class="active" data-i18n="n5">섭외 문의</a></li>
+      </ul>
+      <a class="nav-ig" href="https://www.instagram.com/amicone_2025/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <select class="lang-sel" id="langSel" onchange="setLang(this.value)" aria-label="Language">
+        <option value="ko">한국어</option><option value="en">English</option><option value="it">Italiano</option>
+      </select>
+      <button class="menu-btn" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="subhero">
+  <div class="bg"></div>
+  <div class="shade"></div>
+  <div class="subhero-inner">
+    <div class="wrap">
+      <span class="label">Booking</span>
+      <h1>Booking</h1>
+      <p class="ko" data-i18n="n5">섭외 문의</p>
+    </div>
+  </div>
+</header>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rv">
+        <span class="label">Booking</span>
+        <p class="lede" data-i18n="c_lede">품격 있는 성악 무대가 필요한 순간,<br>아미코네가 함께합니다.</p>
+        <p class="desc" data-i18n="c_desc">기획공연 · 오페라 갈라 · 기업/기관 행사 · 축하 연주 · 페스티벌 초청 등 다양한 무대에 함께합니다.</p>
+        <div class="c-lines">
+          <div><b data-i18n="cl1">대표</b><span data-i18n="c_rep">길경남 (바리톤)</span></div>
+          <div><b data-i18n="cl2">전화</b><a href="tel:010-6417-9634">010-6417-9634</a></div>
+          <div><b data-i18n="cl3">이메일</b><a href="mailto:amicone5@naver.com">amicone5@naver.com</a></div>
+          <div><b>INSTAGRAM</b><a href="https://www.instagram.com/amicone_2025/" target="_blank" rel="noopener">@amicone_2025</a></div>
+          <div><b data-i18n="cl4">구성</b><span data-i18n="c_comp">소프라노 · 메조소프라노 · 테너 · 바리톤 · 피아노</span></div>
+          <div><b data-i18n="cl5">활동지역</b><span data-i18n="c_area">대구 · 경북 및 전국</span></div>
+        </div>
+      </div>
+      <form class="rv d1" onsubmit="return sendMail(this)">
+        <div><label data-i18n="fm_who">성함 / 소속</label><input name="who" required data-ph="fm_who_ph" placeholder="홍길동 / OO문화재단"></div>
+        <div><label data-i18n="fm_email">이메일 (회신용)</label><input type="email" name="email" required data-ph="fm_email_ph" placeholder="you@example.com"></div>
+        <div><label data-i18n="fm_phone">연락처 (전화)</label><input type="tel" name="phone" data-ph="fm_phone_ph" placeholder="010-0000-0000"></div>
+        <div><label data-i18n="fm_type">공연 유형</label>
+          <select name="type">
+            <option data-i18n="o1">기획공연</option><option data-i18n="o2">오페라 갈라</option><option data-i18n="o3">기업·기관 행사</option><option data-i18n="o4">축하 연주</option><option data-i18n="o5">페스티벌 초청</option><option data-i18n="o6">기타</option>
+          </select>
+        </div>
+        <div><label data-i18n="fm_when">희망 일시 · 장소</label><input name="when" data-ph="fm_when_ph" placeholder="2026년 12월 / 대구"></div>
+        <div><label data-i18n="fm_msg">문의 내용</label><textarea name="msg" required data-ph="fm_msg_ph" placeholder="공연 규모, 예산, 프로그램 희망 사항 등을 적어주세요."></textarea></div>
+        <button class="btn" type="submit">SEND</button>
+        <p class="form-note" data-i18n="fm_note">※ 버튼을 누르면 메일 앱이 열리며 내용이 자동으로 채워집니다.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><div class="flogo"><img src="assets/logo.png" alt="AMICONE"></div>
+    <div class="fnav">
+      <a href="./" data-i18n="n1">소개</a>
+      <a href="history.html" data-i18n="n2">연혁</a>
+      <a href="sketches.html" data-i18n="n3">연주 스케치</a>
+      <a href="members.html" data-i18n="n4">단원</a>
+      <a href="contact.html" data-i18n="n5">섭외 문의</a>
+    </div>
+    <a class="ig" href="https://www.instagram.com/amicone_2025/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1" fill="currentColor" stroke="none"/></svg> @amicone_2025</a></div>
+    <p data-i18n="foot">문의 010-6417-9634 · amicone5@naver.com<br>© 2026 AMICONE Opera Singers</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
