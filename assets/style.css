@@ -217,7 +217,7 @@ nav .snd.on i:nth-child(2){animation-delay:.15s}nav .snd.on i:nth-child(3){anima
 
 /* ---------- members ---------- */
 .ensemble{position:relative;overflow:hidden;background:var(--bg2)}
-.ensemble img{width:100%;height:min(70vh,640px);object-fit:cover;object-position:center 30%}
+.ensemble img{width:100%;height:min(70vh,640px);object-fit:cover;object-position:center 8%}
 .ensemble .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,20,0) 40%,rgba(20,17,20,.55) 72%,rgba(20,17,20,.94) 100%)}
 .ensemble .txt{position:absolute;left:0;right:0;bottom:0;padding-bottom:clamp(30px,5vh,56px)}
 .ensemble .txt .wrap{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:end}
